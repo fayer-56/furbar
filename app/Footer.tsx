@@ -39,8 +39,7 @@ export default function Footer() {
       </svg>
 
       <div className="relative isolate overflow-hidden bg-(--fb-tonal) text-(--fb-on-tonal)">
-        {/* 
-        <svg
+        {/* <svg
           aria-hidden
           className="pointer-events-none absolute inset-0 -z-10 h-full w-full opacity-60"
           viewBox="0 0 1200 700"
@@ -114,7 +113,7 @@ export default function Footer() {
                       onClick={() => {
                         router.push(link.href);
                       }}
-                      className={`inline-block rounded-full bg-white/10 px-4 py-2 transition-all duration-300 hover:bg-white/20 ${focusRing}`}
+                      className={`inline-block rounded-full bg-white/10 px-4 py-2 transition-all duration-300 hover:bg-white/20 dark:text-primary ${focusRing}`}
                     >
                       {link.name}
                     </Button>

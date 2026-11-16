@@ -47,7 +47,103 @@
   --radius-3xl: calc(var(--radius) * 2.2);
   --radius-4xl: calc(var(--radius) * 2.6);
 }
+/*
+ * Thème Fur Bar Lorient (Tailwind v4)
+ * À importer dans globals.css, APRÈS `@import "tailwindcss";` :
+ *   @import "./fur-bar-theme.css";
+ *
+ * Les couleurs sont sur :root / .dark (et non sur un wrapper) pour que les menus
+ * déroulants (rendus dans un portail) et le Footer en héritent aussi.
+ * `@theme inline` génère des utilitaires sans ambiguïté : bg-fb-tonal, text-fb-on-tonal,
+ * outline-fb-on-bg, ring-fb-line, bg-fb-on-tonal/10, etc.
+ */
 
+@theme inline {
+  --color-fb-bg: var(--fb-bg);
+  --color-fb-on-bg: var(--fb-on-bg);
+  --color-fb-hero: var(--fb-hero);
+  --color-fb-on-hero: var(--fb-on-hero);
+  --color-fb-ribbon: var(--fb-ribbon);
+  --color-fb-bubble: var(--fb-bubble);
+  --color-fb-on-bubble: var(--fb-on-bubble);
+  --color-fb-card: var(--fb-card);
+  --color-fb-on-card: var(--fb-on-card);
+  --color-fb-on-card-var: var(--fb-on-card-var);
+  --color-fb-chip: var(--fb-chip);
+  --color-fb-tonal: var(--fb-tonal);
+  --color-fb-on-tonal: var(--fb-on-tonal);
+  --color-fb-accent: var(--fb-accent);
+  --color-fb-on-accent: var(--fb-on-accent);
+  --color-fb-primary: var(--fb-primary);
+  --color-fb-on-primary: var(--fb-on-primary);
+  --color-fb-line: var(--fb-line);
+}
+
+:root {
+  --fb-bg: #744c33;
+  --fb-on-bg: #f6efe7;
+  --fb-hero: #9c6745;
+  --fb-on-hero: #f6efe7;
+  --fb-ribbon: #7f563b;
+  --fb-bubble: #ede2d6;
+  --fb-on-bubble: #7f563b;
+  --fb-card: #f3e8dc;
+  --fb-on-card: #3b2417;
+  --fb-on-card-var: #6b5140;
+  --fb-chip: #e6d3c3;
+  --fb-tonal: #5c3a24;
+  --fb-on-tonal: #f6ebe0;
+  --fb-accent: #f2c46d;
+  --fb-on-accent: #3a2600;
+  --fb-primary: #f6efe7;
+  --fb-on-primary: #5c3a24;
+  --fb-line: rgb(246 239 231 / 0.16);
+}
+
+.dark {
+  --fb-bg: #1e130c;
+  --fb-on-bg: #ede2d6;
+  --fb-hero: #6e4529;
+  --fb-on-hero: #f6efe7;
+  --fb-ribbon: #5a3720;
+  --fb-bubble: #ede2d6;
+  --fb-on-bubble: #6e4529;
+  --fb-card: #2d1e14;
+  --fb-on-card: #f1dfd2;
+  --fb-on-card-var: #cdb7a7;
+  --fb-chip: #3a2719;
+  --fb-tonal: #3a2316;
+  --fb-on-tonal: #f1e4d8;
+  --fb-accent: #e6b35a;
+  --fb-on-accent: #2e1d00;
+  --fb-primary: #ede2d6;
+  --fb-on-primary: #4a2610;
+  --fb-line: rgb(237 226 214 / 0.1);
+}
+
+@keyframes fb-morph {
+  0%, 100% { border-radius: 58% 42% 47% 53% / 52% 47% 53% 48%; transform: rotate(0deg); }
+  50%      { border-radius: 44% 56% 55% 45% / 46% 56% 44% 54%; transform: rotate(6deg); }
+}
+@keyframes fb-float {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-10px); }
+}
+@keyframes fb-drift {
+  0%, 100% { transform: translateX(0); }
+  50%      { transform: translateX(-24px); }
+}
+
+.fb-morph { animation: fb-morph 9s ease-in-out infinite; }
+.fb-float { animation: fb-float 6s ease-in-out infinite; }
+.fb-drift { animation: fb-drift 14s ease-in-out infinite; }
+
+html { scroll-behavior: smooth; }
+
+@media (prefers-reduced-motion: reduce) {
+  .fb-morph, .fb-float, .fb-drift { animation: none; }
+  html { scroll-behavior: auto; }
+}
 :root {
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.147 0.004 49.3);

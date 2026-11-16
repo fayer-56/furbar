@@ -1,6 +1,6 @@
 export const StaticDataWebsite = {
   website: {
-    name: "ACME",
+    name: "Furbar Lorient",
     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
     contact: {
       email: "contact@example.tld",
@@ -27,48 +27,42 @@ export const StaticDataWebsite = {
     ],
   },
   footer: {
-    description: "Finely crafted blocks built with Shadcn UI.",
+    description:
+      "Soirées conviviales, jeux et rencontres pour la communauté furry de Lorient. ",
     sections: [
       {
-        title: "Product",
+        title: "Navigation",
         links: [
-          { name: "Overview", href: "#" },
-          { name: "Pricing", href: "#" },
-          { name: "Marketplace", href: "#" },
-          { name: "Features", href: "#" },
-          { name: "Integrations", href: "#" },
+          { name: "Qui sommes-nous ?", href: "#" },
+          { name: "Actualités", href: "#" },
+          { name: "Planning", href: "#" },
+          { name: "Galerie", href: "#" },
         ],
       },
       {
-        title: "Company",
+        title: "Rejoindre",
         links: [
-          { name: "About", href: "#" },
-          { name: "Team", href: "#" },
-          { name: "Blog", href: "#" },
-          { name: "Careers", href: "#" },
-          { name: "Contact", href: "#" },
-        ],
-      },
-      {
-        title: "Support",
-        links: [
-          { name: "Help center", href: "#" },
-          { name: "Documentation", href: "#" },
-          { name: "Status", href: "#" },
-          { name: "Community", href: "#" },
+          { name: "Faire un don", href: "#" },
+          { name: "Devenir bénévole", href: "#" },
+          { name: "Adhérer", href: "#" },
+          { name: "Espace membre", href: "#" },
         ],
       },
       {
         title: "Resources",
+        links: [{ name: "Guides visuel", href: "#" }],
+      },
+      {
+        title: "Contact",
         links: [
-          { name: "Guides", href: "#" },
-          { name: "Templates", href: "#" },
-          { name: "Sales", href: "#" },
-          { name: "Advertise", href: "#" },
+          { name: "Contact", href: "#" },
+          { name: "Canal BARQ", href: "#" },
+          { name: "Canal Telegram", href: "#" },
         ],
       },
     ],
-    copyright: "© 2026 FURBAR Lorient. All rights reserved.",
+    copyright:
+      "© 2026 FURBAR Lorient. Association loi 1901 à but non lucratif (RNA : WXXXXXXXXX). All rights reserved.",
     legalLinks: [
       { name: "Conditions générales", href: "#" },
       { name: "Politique de confidentialité", href: "#" },
